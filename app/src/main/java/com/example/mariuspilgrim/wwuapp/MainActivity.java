@@ -29,7 +29,7 @@ public class MainActivity extends ActionBarActivity {
                 R.layout.drawer_nav_item, R.id.flContent);
         // Add nav items
         dlDrawer.addNavItem("First", R.drawable.ic_one1, "ic_one", DepartmentFragment.class);
-        dlDrawer.addNavItem("Second", R.drawable.ic_two2, "ic_two", ContactFragment.class);
+        dlDrawer.addNavItem("Second", R.drawable.ic_two2, "ic_two", DepartmentFragment.class);
         dlDrawer.addNavItem("Third", R.drawable.ic_three3, "ic_three", DepartmentFragment.class);
         // Select default
         if (savedInstanceState == null) {
