@@ -41,4 +41,17 @@
     <string name="email_chooser">Send email ...</string>
 
     <string name="ContactResultFragmentActivity">Your message</string>
+
+    <string-array name="menu_items_array">
+        <item>Welcome</item>
+        <item>The Department</item>
+        <item>Student Affairs</item>
+        <item>Prospective Students</item>
+        <item>Research</item>
+        <item>News</item>
+        <item>The Campus</item>
+        <item>Contact</item>
+        <item>Copyright Page</item>
+    </string-array>
+
 </resources>

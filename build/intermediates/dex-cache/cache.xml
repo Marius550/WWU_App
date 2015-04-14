@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/mariuspilgrim/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jar="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-95c6f6aee63f8ee914ff5a60405e6865168051d7.jar" />
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/pre-dexed/debug/classes-e0f782178f20b466527634715899fa2b45083f58.jar" />
     </item>
     <item
         jar="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
@@ -16,11 +16,11 @@
         <dex dex="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/pre-dexed/debug/classes-948e43b64236f49e728d669208a5c7f04f874474.jar" />
     </item>
     <item
-        jar="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jar="/Users/mariuspilgrim/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/pre-dexed/debug/classes-e0f782178f20b466527634715899fa2b45083f58.jar" />
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-95c6f6aee63f8ee914ff5a60405e6865168051d7.jar" />
     </item>
     <item
         jar="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
