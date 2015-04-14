@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- A child of the main activity -->
+
+        <activity
+            android:name="com.example.mariuspilgrim.wwuapp.ContactResultActivity"
+            android:label="@string/ContactResultFragmentActivity">
+        </activity>
+
     </application>
 
 </manifest>
