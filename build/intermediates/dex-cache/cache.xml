@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/pre-dexed/debug/classes-e0f782178f20b466527634715899fa2b45083f58.jar" />
-    </item>
-    <item
         jar="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
         <dex dex="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/pre-dexed/debug/classes-948e43b64236f49e728d669208a5c7f04f874474.jar" />
+    </item>
+    <item
+        jar="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/pre-dexed/debug/classes-e0f782178f20b466527634715899fa2b45083f58.jar" />
     </item>
     <item
         jar="/Users/mariuspilgrim/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
@@ -28,6 +28,13 @@
         revision="21.1.2"
         sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
         <dex dex="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-ca528ee1f4daf0624ee6b14f2c1f0a9059947428.jar" />
+    </item>
+    <item
+        jar="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/Users/mariuspilgrim/Documents/WWU_App/app/build/intermediates/pre-dexed/debug/classes-702f9492ab2fa6ad4d6824ea5dc7900b3a8f0be9.jar" />
     </item>
 
 </items>

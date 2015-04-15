@@ -1,6 +1,9 @@
 package com.example.mariuspilgrim.wwuapp;
 
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
+import android.provider.Settings;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,16 +32,16 @@ public class MainActivity extends ActionBarActivity {
                 R.layout.drawer_nav_item, R.id.flContent);
         // Add nav items
         dlDrawer.addNavItem(getResources().getString(R.string.menu_welcome), R.drawable.ic_one1, getResources().getString(R.string.menu_welcome_title), WelcomeFragment.class);
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_administration), R.drawable.ic_two2, getResources().getString(R.string.menu_administration_title), DepartmentFragment.class);
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_news), R.drawable.ic_three3, getResources().getString(R.string.menu_News_title), DepartmentFragment.class);
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_calendar), R.drawable.ic_one1, getResources().getString(R.string.menu_calendar_title), DepartmentFragment.class);
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_directory), R.drawable.ic_two2, getResources().getString(R.string.menu_directory_title), DepartmentFragment.class);
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_map), R.drawable.ic_three3, getResources().getString(R.string.menu_map_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_administration), R.drawable.ic_action_person, getResources().getString(R.string.menu_administration_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_news), R.drawable.ic_action_time, getResources().getString(R.string.menu_News_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_calendar), R.drawable.ic_action_go_to_today, getResources().getString(R.string.menu_calendar_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_directory), R.drawable.ic_action_dock, getResources().getString(R.string.menu_directory_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_map), R.drawable.ic_action_map, getResources().getString(R.string.menu_map_title), DepartmentFragment.class);
         dlDrawer.addNavItem(getResources().getString(R.string.menu_dining), R.drawable.ic_one1, getResources().getString(R.string.menu_dining_title), DepartmentFragment.class);
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_library), R.drawable.ic_one1, getResources().getString(R.string.menu_library_title), DepartmentFragment.class);
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_settings), R.drawable.ic_two2, getResources().getString(R.string.menu_settings_title), DepartmentFragment.class);
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_about), R.drawable.ic_three3, getResources().getString(R.string.menu_about_title), DepartmentFragment.class);
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_feedback), R.drawable.ic_one1, getResources().getString(R.string.menu_feedback_title), ContactFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_library), R.drawable.ic_action_cast, getResources().getString(R.string.menu_library_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_settings), R.drawable.ic_action_settings, getResources().getString(R.string.menu_settings_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_about), R.drawable.ic_action_about, getResources().getString(R.string.menu_about_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_feedback), R.drawable.ic_action_email, getResources().getString(R.string.menu_feedback_title), ContactFragment.class);
         // Select default
         if (savedInstanceState == null) {
             dlDrawer.selectDrawerItem(0);
@@ -70,8 +73,43 @@ public class MainActivity extends ActionBarActivity {
         if (dlDrawer.getDrawerToggle().onOptionsItemSelected(item)) {
             return true;
         }
+        // Handle action buttons
+        switch(item.getItemId()) {
+            case R.id.action_settings:
+                openAndroidSettings();
+                return true;
+            case R.id.action_browser:
+                openAndroidBrowser();
+                return true;
+            case R.id.action_map:
+                goToGoogleMapsActionBar();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
-        return super.onOptionsItemSelected(item);
+    /**
+     * Opens Android device settings
+     */
+    public void openAndroidSettings() {
+        startActivityForResult(new Intent(Settings.ACTION_SETTINGS), 0);
+    }
+
+    /**
+     * Opens Android device browser
+     */
+    public void openAndroidBrowser() {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.browser_default_address)));
+        startActivity(browserIntent);
+    }
+
+    /**
+     * Opens google maps fragment activity
+     */
+    public void goToGoogleMapsActionBar() {
+        Intent intent = new Intent(this, MapsFragmentActivity.class);
+        startActivity(intent);
     }
 
 

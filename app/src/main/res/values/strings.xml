@@ -25,6 +25,8 @@
     <string name="menu_feedback_title">Feedback</string>
 
     <string name="action_settings">Settings</string>
+    <string name="action_browser">Browser</string>
+    <string name="action_map">Map</string>
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
@@ -63,5 +65,11 @@
     <string name="email_chooser">Send email ...</string>
 
     <string name="ContactResultFragmentActivity">Your message</string>
+    <string name="browser_default_address">https://www.google.de</string>
+    <string name="title_activity_maps">Leonardo Campus</string>
+
+    <string name="google_maps_key">AIzaSyAkzBgzJB-xmqD4xcJU7cyfP4WxHdohy7Y</string>
+    <string name="campus_show_map">Show on map</string>
+    <string name="campus_address">Leonardo-Campus 3, 48149 Münster</string>
 
 </resources>
