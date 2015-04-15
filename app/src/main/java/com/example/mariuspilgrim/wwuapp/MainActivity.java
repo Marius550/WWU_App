@@ -27,17 +27,17 @@ public class MainActivity extends ActionBarActivity {
 
         // Find our drawer view
         dlDrawer = (FragmentNavigationDrawer) findViewById(R.id.drawer_layout);
+
         // Setup drawer view
-        dlDrawer.setupDrawerConfiguration((ListView) findViewById(R.id.lvDrawer), toolbar,
-                R.layout.drawer_nav_item, R.id.flContent);
+        dlDrawer.setupDrawerConfiguration((ListView) findViewById(R.id.lvDrawer), toolbar, R.layout.drawer_nav_item, R.id.flContent);
         // Add nav items
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_welcome), R.drawable.ic_one1, getResources().getString(R.string.menu_welcome_title), WelcomeFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_welcome), R.drawable.ic_action_home, getResources().getString(R.string.menu_welcome_title), WelcomeFragment.class);
         dlDrawer.addNavItem(getResources().getString(R.string.menu_administration), R.drawable.ic_action_person, getResources().getString(R.string.menu_administration_title), DepartmentFragment.class);
         dlDrawer.addNavItem(getResources().getString(R.string.menu_news), R.drawable.ic_action_time, getResources().getString(R.string.menu_News_title), DepartmentFragment.class);
         dlDrawer.addNavItem(getResources().getString(R.string.menu_calendar), R.drawable.ic_action_go_to_today, getResources().getString(R.string.menu_calendar_title), DepartmentFragment.class);
         dlDrawer.addNavItem(getResources().getString(R.string.menu_directory), R.drawable.ic_action_dock, getResources().getString(R.string.menu_directory_title), DepartmentFragment.class);
         dlDrawer.addNavItem(getResources().getString(R.string.menu_map), R.drawable.ic_action_map, getResources().getString(R.string.menu_map_title), DepartmentFragment.class);
-        dlDrawer.addNavItem(getResources().getString(R.string.menu_dining), R.drawable.ic_one1, getResources().getString(R.string.menu_dining_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_dining), R.drawable.ic_action_favorite, getResources().getString(R.string.menu_dining_title), DepartmentFragment.class);
         dlDrawer.addNavItem(getResources().getString(R.string.menu_library), R.drawable.ic_action_cast, getResources().getString(R.string.menu_library_title), DepartmentFragment.class);
         dlDrawer.addNavItem(getResources().getString(R.string.menu_settings), R.drawable.ic_action_settings, getResources().getString(R.string.menu_settings_title), DepartmentFragment.class);
         dlDrawer.addNavItem(getResources().getString(R.string.menu_about), R.drawable.ic_action_about, getResources().getString(R.string.menu_about_title), DepartmentFragment.class);
@@ -73,6 +73,7 @@ public class MainActivity extends ActionBarActivity {
         if (dlDrawer.getDrawerToggle().onOptionsItemSelected(item)) {
             return true;
         }
+
         // Handle action buttons
         switch(item.getItemId()) {
             case R.id.action_settings:
@@ -116,7 +117,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
-     * Opens google maps fragment activity
+     * Opens expandable list
      */
     public void openExpandableList() {
         Intent intent = new Intent(this, NewAuditActivityList.class);

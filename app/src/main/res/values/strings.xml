@@ -3,8 +3,8 @@
 
     <string name="menu_welcome">Welcome</string>
     <string name="menu_welcome_title">Welcome to WWU</string>
-    <string name="menu_administration">Student administration</string>
-    <string name="menu_administration_title">Student administration</string>
+    <string name="menu_administration">Student Administration</string>
+    <string name="menu_administration_title">Student Administration</string>
     <string name="menu_news">News</string>
     <string name="menu_News_title">News</string>
     <string name="menu_calendar">Calendar</string>
@@ -28,6 +28,9 @@
     <string name="action_browser">Browser</string>
     <string name="action_map">Map</string>
     <string name="action_list">List</string>
+
+    <string name="action_list_contact_result">List Individual</string>
+    <string name="action_go_back">Go Back</string>
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>

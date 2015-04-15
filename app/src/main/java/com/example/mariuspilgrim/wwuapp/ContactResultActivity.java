@@ -1,24 +1,23 @@
 package com.example.mariuspilgrim.wwuapp;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.SearchManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class ContactResultActivity extends Activity {
+public class ContactResultActivity extends ActionBarActivity {
 
     public ContactResultActivity() {
-        //MainActivity m = new MainActivity();
+
     }
 
     @Override
@@ -27,6 +26,10 @@ public class ContactResultActivity extends Activity {
 
         try {
             setContentView(R.layout.fragment_contact_results);
+
+            // Set a Toolbar to replace the ActionBar.
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
 
             Intent intent = getIntent();
             String messageFirstName = intent.getStringExtra(ContactFragment.EXTRA_MESSAGE_FIRST_NAME);
@@ -49,58 +52,55 @@ public class ContactResultActivity extends Activity {
             textViewEmail.append(Html.fromHtml(textViewEmailHtml));
             textViewMessage.append(Html.fromHtml(textViewMessageHtml));
 
-            //throw new RuntimeException(); //triggers Exception
+            //throw new RuntimeException();
         } catch (Exception ex) {
             messageBox(getResources().getString(R.string.error_oncreate_ContactResultFragmentActivity), ex.getMessage());
             ex.printStackTrace();
         }
-        // enable ActionBar app icon to behave as action to toggle nav drawer
-        // Causes error here
-        // getActionBar().setDisplayHomeAsUpEnabled(true);
-        // getActionBar().setHomeButtonEnabled(true);
     }
 
-    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main, menu);
+        // Uncomment to inflate menu items to Action Bar
+        inflater.inflate(R.menu.menu_contact_result, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        // The action bar home/up action should open or close the drawer.
+        // ActionBarDrawerToggle will take care of this.
+
         // Handle action buttons
         switch(item.getItemId()) {
-            case R.id.action_websearch:
-                // create intent to perform web search for this planet
-                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-                intent.putExtra(SearchManager.QUERY, getActionBar().getTitle());
-                // catch event that there's no activity to handle intent
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(this, R.string.app_not_available, Toast.LENGTH_LONG).show();
-                }
+            case R.id.action_go_back_contact_result:
+                backToSendMessage(findViewById(R.id.home));
                 return true;
-            case R.id.action_settings:
+            case R.id.action_settings_contact_result:
                 openAndroidSettings();
                 return true;
-            case R.id.action_browser:
+            case R.id.action_browser_contact_result:
                 openAndroidBrowser();
                 return true;
-            case R.id.action_map:
+            case R.id.action_map_contact_result:
                 goToGoogleMapsActionBar();
                 return true;
-            case android.R.id.home:
-                backToSendMessageActionBar(findViewById(R.id.home));
+            case R.id.action_list_contact_result:
+                openExpandableList();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-    */
+
+    /**
+     * Go back to message input
+     */
+    public void backToSendMessage(View view) {
+        setContentView(R.layout.fragment_contact);
+        finish();
+    }
 
     /**
      * Opens Android device settings
@@ -112,22 +112,26 @@ public class ContactResultActivity extends Activity {
     /**
      * Opens Android device browser
      */
-    /*
     public void openAndroidBrowser() {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.browser_default_address)));
         startActivity(browserIntent);
     }
-    */
 
     /**
      * Opens google maps fragment activity
      */
-    /*
     public void goToGoogleMapsActionBar() {
         Intent intent = new Intent(this, MapsFragmentActivity.class);
         startActivity(intent);
     }
-    */
+
+    /**
+     * Opens expandable list
+     */
+    public void openExpandableList() {
+        Intent intent = new Intent(this, NewAuditActivityList.class);
+        startActivity(intent);
+    }
 
     public void sendAsEmail(View view) {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
@@ -145,16 +149,6 @@ public class ContactResultActivity extends Activity {
 
             emailIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(completeEmailMessage));
         startActivity(Intent.createChooser(emailIntent, getResources().getString(R.string.email_chooser)));
-    }
-
-    public void backToSendMessage(View view) {
-        setContentView(R.layout.fragment_contact);
-        finish();
-    }
-
-    public void backToSendMessageActionBar(View view) {
-        setContentView(R.layout.fragment_contact);
-        finish();
     }
 
     /**

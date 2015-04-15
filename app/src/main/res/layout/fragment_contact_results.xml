@@ -1,16 +1,29 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/fragment_contact_results"
+<com.example.mariuspilgrim.wwuapp.FragmentNavigationDrawer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout_fragment_contact_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
+    <!-- The ActionBar -->
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- The main content view -->
     <TextView
         android:id="@+id/result_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingTop="30dp"
+        android:paddingTop="10dp"
         android:textSize="16sp"
         android:layout_marginBottom="1dp" />
     <TextView
@@ -52,3 +65,5 @@
         android:onClick="backToSendMessage"
         android:textSize="16sp" />
 </LinearLayout>
+
+</com.example.mariuspilgrim.wwuapp.FragmentNavigationDrawer>
