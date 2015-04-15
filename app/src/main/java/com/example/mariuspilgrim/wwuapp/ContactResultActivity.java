@@ -55,8 +55,9 @@ public class ContactResultActivity extends Activity {
             ex.printStackTrace();
         }
         // enable ActionBar app icon to behave as action to toggle nav drawer
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
+        // Causes error here
+        // getActionBar().setDisplayHomeAsUpEnabled(true);
+        // getActionBar().setHomeButtonEnabled(true);
     }
 
     /*

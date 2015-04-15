@@ -1,10 +1,7 @@
 package com.example.mariuspilgrim.wwuapp;
 
-/**
- * Created by mariuspilgrim on 4/14/15.
- */
 import android.app.AlertDialog;
-import android.app.Fragment;
+
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
@@ -14,12 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * Created by mariuspilgrim on 12/03/15.
- */
 public class DepartmentFragment extends android.support.v4.app.Fragment {
-
-    public static final String ARG_DEPARTMENT_NUMBER = "DEPARTMENT_number";
 
     public DepartmentFragment() {
         // Empty constructor required for fragment subclasses
@@ -28,13 +20,6 @@ public class DepartmentFragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_department, container, false);
-        /*
-        Usually the following code is used for titles
-        int i = getArguments().getInt(ARG_DEPARTMENT_NUMBER);
-        String menuItem = getResources().getStringArray(R.array.menu_items_array)[i];
-        getActivity().setTitle(menuItem)
-        */
-        //getActivity().setTitle(getResources().getString(R.string.menu_item_title_alternative));
 
         TextView textView_welcome = (TextView) rootView.findViewById(R.id.department_prof_list);
         textView_welcome.setTextColor(Color.parseColor("#852339"));

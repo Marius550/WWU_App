@@ -28,9 +28,17 @@ public class MainActivity extends ActionBarActivity {
         dlDrawer.setupDrawerConfiguration((ListView) findViewById(R.id.lvDrawer), toolbar,
                 R.layout.drawer_nav_item, R.id.flContent);
         // Add nav items
-        dlDrawer.addNavItem("First", R.drawable.ic_one1, "ic_one", DepartmentFragment.class);
-        dlDrawer.addNavItem("Second", R.drawable.ic_two2, "ic_two", DepartmentFragment.class);
-        dlDrawer.addNavItem("Third", R.drawable.ic_three3, "ic_three", DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_welcome), R.drawable.ic_one1, getResources().getString(R.string.menu_welcome_title), WelcomeFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_administration), R.drawable.ic_two2, getResources().getString(R.string.menu_administration_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_news), R.drawable.ic_three3, getResources().getString(R.string.menu_News_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_calendar), R.drawable.ic_one1, getResources().getString(R.string.menu_calendar_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_directory), R.drawable.ic_two2, getResources().getString(R.string.menu_directory_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_map), R.drawable.ic_three3, getResources().getString(R.string.menu_map_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_dining), R.drawable.ic_one1, getResources().getString(R.string.menu_dining_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_library), R.drawable.ic_one1, getResources().getString(R.string.menu_library_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_settings), R.drawable.ic_two2, getResources().getString(R.string.menu_settings_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_about), R.drawable.ic_three3, getResources().getString(R.string.menu_about_title), DepartmentFragment.class);
+        dlDrawer.addNavItem(getResources().getString(R.string.menu_feedback), R.drawable.ic_one1, getResources().getString(R.string.menu_feedback_title), ContactFragment.class);
         // Select default
         if (savedInstanceState == null) {
             dlDrawer.selectDrawerItem(0);
@@ -51,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         // Uncomment to inflate menu items to Action Bar
-        // inflater.inflate(R.menu.main, menu);
+        inflater.inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -65,6 +73,8 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {

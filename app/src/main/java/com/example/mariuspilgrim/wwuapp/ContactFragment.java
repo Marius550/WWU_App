@@ -1,9 +1,5 @@
 package com.example.mariuspilgrim.wwuapp;
 
-/**
- * Created by mariuspilgrim on 4/14/15.
- */
-
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,21 +10,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by mariuspilgrim on 12/03/15.
- */
 public class ContactFragment extends android.support.v4.app.Fragment {
 
-    public static final String ARG_CONTACT_NUMBER = "CONTACT_number";
-
-    public final static String EXTRA_MESSAGE_FIRST_NAME = "com.example.android.navigationdrawerexample.MESSAGE_FIRST_NAME";
-    public final static String EXTRA_MESSAGE_LAST_NAME = "com.example.android.navigationdrawerexample.MESSAGE_LAST_NAME";
-    public final static String EXTRA_MESSAGE_EMAIL = "com.example.android.navigationdrawerexample.MESSAGE_EMAIL";
-    public final static String EXTRA_MESSAGE_MESSAGE = "com.example.android.navigationdrawerexample.MESSAGE_MESSAGE";
+    public final static String EXTRA_MESSAGE_FIRST_NAME = "com.example.mariuspilgrim.wwuapp.MESSAGE_FIRST_NAME";
+    public final static String EXTRA_MESSAGE_LAST_NAME = "com.example.mariuspilgrim.wwuapp.MESSAGE_LAST_NAME";
+    public final static String EXTRA_MESSAGE_EMAIL = "com.example.mariuspilgrim.wwuapp.MESSAGE_EMAIL";
+    public final static String EXTRA_MESSAGE_MESSAGE = "com.example.mariuspilgrim.wwuapp.MESSAGE_MESSAGE";
 
     public ContactFragment() {
         // Empty constructor required for fragment subclasses
@@ -36,16 +26,13 @@ public class ContactFragment extends android.support.v4.app.Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.fragment_contact, container, false); //final View?
-        int i = getArguments().getInt(ARG_CONTACT_NUMBER);
-        //String menuItem = getResources().getStringArray(R.array.menu_items_array)[i];
-        //getActivity().setTitle(menuItem);
+        final View rootView = inflater.inflate(R.layout.fragment_contact, container, false);
 
-        TextView textView_welcome = (TextView) rootView.findViewById(R.id.welcome_info);
-        textView_welcome.setTextColor(Color.parseColor("#852339"));
-        textView_welcome.setText(getResources().getText(R.string.welcome_info));
+        TextView textView_welcome = (TextView) rootView.findViewById(R.id.welcome_info_feedback_form);
+        //textView_welcome.setTextColor(Color.parseColor("#852339"));
+        textView_welcome.setText(getResources().getText(R.string.welcome_info_feedback_form));
 
-        Button button_setDefaultInputValues = (Button) rootView.findViewById(R.id.btn_setDefaultInputValues); //final Button?
+        Button button_setDefaultInputValues = (Button) rootView.findViewById(R.id.btn_setDefaultInputValues);
         button_setDefaultInputValues.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,8 +75,8 @@ public class ContactFragment extends android.support.v4.app.Fragment {
 
             if(isEmailValid(messageEmail)) {
             } else {
-                messageBox( getResources().getString(R.string.edit_email_incorrect_title),
-                        getResources().getString(R.string.edit_email_incorrect));
+                messageBox(getResources().getString(R.string.edit_email_incorrect_title),
+                           getResources().getString(R.string.edit_email_incorrect));
                 return false;
             }
 

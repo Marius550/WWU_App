@@ -5,10 +5,12 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/welcome_info"
+        android:id="@+id/welcome_info_feedback_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/welcome_info"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:hint="@string/welcome_info_feedback_form"
         android:textSize="16sp"
         android:layout_marginBottom="20dp"/>
     <EditText
