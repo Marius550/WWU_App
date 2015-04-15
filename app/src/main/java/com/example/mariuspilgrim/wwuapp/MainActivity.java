@@ -84,6 +84,9 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_map:
                 goToGoogleMapsActionBar();
                 return true;
+            case R.id.action_list:
+                openExpandableList();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -109,6 +112,14 @@ public class MainActivity extends ActionBarActivity {
      */
     public void goToGoogleMapsActionBar() {
         Intent intent = new Intent(this, MapsFragmentActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Opens google maps fragment activity
+     */
+    public void openExpandableList() {
+        Intent intent = new Intent(this, NewAuditActivityList.class);
         startActivity(intent);
     }
 

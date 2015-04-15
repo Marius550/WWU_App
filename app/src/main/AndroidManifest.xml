@@ -55,7 +55,17 @@
         <!-- A child of the main activity -->
         <activity
             android:name="com.example.mariuspilgrim.wwuapp.ContactResultActivity"
-            android:label="@string/ContactResultFragmentActivity">
+            android:label="@string/contact_result_fragment_activity">
+        </activity>
+
+        <activity
+            android:name="com.example.mariuspilgrim.wwuapp.MapsFragmentActivity"
+            android:label="@string/title_activity_maps" >
+        </activity>
+
+        <activity
+            android:name="com.example.mariuspilgrim.wwuapp.NewAuditActivityList"
+            android:label="@string/title_activity_list" >
         </activity>
 
             <meta-data
@@ -64,11 +74,6 @@
             <meta-data
                 android:name="com.google.android.maps.v2.API_KEY"
                 android:value="@string/google_maps_key" />
-
-            <activity
-                android:name="com.example.mariuspilgrim.wwuapp.MapsFragmentActivity"
-                android:label="@string/title_activity_maps" >
-            </activity>
 
     </application>
 

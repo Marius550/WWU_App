@@ -17,5 +17,10 @@
         android:title="@string/action_map"
         android:orderInCategory="300"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_list"
+        android:title="@string/action_list"
+        android:orderInCategory="400"
+        app:showAsAction="never" />
 </menu>
 

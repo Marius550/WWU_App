@@ -27,6 +27,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_browser">Browser</string>
     <string name="action_map">Map</string>
+    <string name="action_list">List</string>
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
@@ -64,12 +65,70 @@
     <string name="contact_email_subject">Message from WWU app</string>
     <string name="email_chooser">Send email ...</string>
 
-    <string name="ContactResultFragmentActivity">Your message</string>
+    <string name="contact_result_fragment_activity">Your message</string>
     <string name="browser_default_address">https://www.google.de</string>
     <string name="title_activity_maps">Leonardo Campus</string>
+    <string name="title_activity_list">List</string>
 
     <string name="google_maps_key">AIzaSyAkzBgzJB-xmqD4xcJU7cyfP4WxHdohy7Y</string>
     <string name="campus_show_map">Show on map</string>
     <string name="campus_address">Leonardo-Campus 3, 48149 Münster</string>
+
+    <!-- Expandable list group items -->
+    <string-array name="group_list_items_array">
+        <item>Employees</item>
+        <item>Building</item>
+        <item>Machinery</item>
+        <item>Process Flow</item>
+        <item>Customs</item>
+        <item>Emergency Measures</item>
+    </string-array>
+
+    <!-- Expandable list child items | group 1 -->
+    <string-array name="group_list_child_item_array_1">
+        <item>Security Training</item>
+        <item>Work Experience</item>
+        <item>Educational Level</item>
+        <item>Career Path</item>
+        <item>Customs</item>
+        <item>Other...</item>
+    </string-array>
+
+    <!-- Expandable list child items | group 2 -->
+    <string-array name="group_list_child_item_array_2">
+        <item>Security Data</item>
+        <item>Emergency Installations</item>
+        <item>Other...</item>
+    </string-array>
+
+    <!-- Expandable list child items | group 3 -->
+    <string-array name="group_list_child_item_array_3">
+        <item>Maintenance</item>
+        <item>Emergency Installations</item>
+        <item>Other...</item>
+    </string-array>
+
+    <!-- Expandable list child items | group 4 -->
+    <string-array name="group_list_child_item_array_4">
+        <item>Efficiency</item>
+        <item>Effectiveness</item>
+        <item>Interruptions</item>
+        <item>Other...</item>
+    </string-array>
+
+    <!-- Expandable list child items | group 5 -->
+    <string-array name="group_list_child_item_array_5">
+        <item>Equipment</item>
+        <item>Training</item>
+        <item>Other...</item>
+    </string-array>
+
+    <!-- Expandable list child items | group 6 -->
+    <string-array name="group_list_child_item_array_6">
+        <item>Installations</item>
+        <item>Training</item>
+        <item>Update Intervals</item>
+        <item>Other...</item>
+    </string-array>
 
 </resources>
